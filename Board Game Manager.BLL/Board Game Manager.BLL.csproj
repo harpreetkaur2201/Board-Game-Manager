@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Board_Game_Manager.BLL</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Board Game Manager.DAL\Board Game Manager.DAL.csproj" />
+    <ProjectReference Include="..\Board Game Manager.Models\Board Game Manager.Models.csproj" />
+  </ItemGroup>
+
+</Project>
