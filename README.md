@@ -37,11 +37,6 @@ A web-based Board Game Management System built using ASP.NET Core MVC. This appl
 - HTML, CSS, Bootstrap
 
 ---
-
-4. Press `F5` or click **Run**
-
----
-
 ## 🎯 Purpose
 
 This project is designed to demonstrate:
@@ -60,11 +55,7 @@ This project is designed to demonstrate:
 - Search and filter functionality
 - API integration
 
----
 
-## 👩‍💻 Author
-
-Harpreet Kaur
 
 
 
