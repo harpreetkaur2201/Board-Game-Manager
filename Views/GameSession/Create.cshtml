@@ -1,0 +1,50 @@
+﻿@model Board_Game_Manager.Models.GameSession
+
+<h2 class="mb-4">Add Game Session</h2>
+
+<form asp-action="Create" method="post" class="card p-4 shadow-sm">
+    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+    <div class="mb-3">
+        <label asp-for="GameID" class="form-label">Game</label>
+        <select asp-for="GameID" asp-items="ViewBag.Games" class="form-select">
+            <option value="">-- Select Game --</option>
+        </select>
+        <span asp-validation-for="GameID" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GMID" class="form-label">Game Master</label>
+        <select asp-for="GMID" asp-items="ViewBag.GameMasters" class="form-select">
+            <option value="">-- Select Game Master --</option>
+        </select>
+        <span asp-validation-for="GMID" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+    <label asp-for="TournamentID" class="form-label">Tournament</label>
+    <select asp-for="TournamentID" asp-items="ViewBag.Tournaments" class="form-select">
+        <option value="">-- Select Tournament --</option>
+    </select>
+    <span asp-validation-for="TournamentID" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GameStartedAt" class="form-label">Start Time</label>
+        <input asp-for="GameStartedAt" type="datetime-local" class="form-control" />
+        <span asp-validation-for="GameStartedAt" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="PlayTimeMinutes" class="form-label">Play Time (Minutes)</label>
+        <input asp-for="PlayTimeMinutes" class="form-control" />
+        <span asp-validation-for="PlayTimeMinutes" class="text-danger"></span>
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

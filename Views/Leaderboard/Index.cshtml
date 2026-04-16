@@ -1,0 +1,100 @@
+﻿@model List<Board_Game_Manager.Models.PlayerLeaderboardItem>
+
+<h1 class="mb-4">Leaderboard</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">No data available.</div>
+}
+else
+{
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="mb-3">Total Score</h4>
+
+            <table class="table table-bordered align-middle leaderboard-table">
+                <thead>
+                    <tr>
+                        <th style="width:100px;">Rank</th>
+                        <th>Player</th>
+                        <th style="width:150px;">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int rank = 1;
+                        foreach (var p in Model.OrderByDescending(x => x.TotalScore))
+                        {
+                            <tr class="@(rank == 1 ? "top-player" : "")">
+                                <td>@rank</td>
+                                <td>@p.Name</td>
+                                <td>@p.TotalScore</td>
+                            </tr>
+                            rank++;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="mb-3">Total Hours Played</h4>
+
+            <table class="table table-bordered align-middle leaderboard-table">
+                <thead>
+                    <tr>
+                        <th style="width:100px;">Rank</th>
+                        <th>Player</th>
+                        <th style="width:150px;">Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int rank2 = 1;
+                        foreach (var p in Model.OrderByDescending(x => x.TotalHours))
+                        {
+                            <tr class="@(rank2 == 1 ? "top-player" : "")">
+                                <td>@rank2</td>
+                                <td>@p.Name</td>
+                                <td>@p.TotalHours</td>
+                            </tr>
+                            rank2++;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h4 class="mb-3">Game Master Contribution</h4>
+
+            <table class="table table-bordered align-middle leaderboard-table">
+                <thead>
+                    <tr>
+                        <th style="width:100px;">Rank</th>
+                        <th>Player</th>
+                        <th style="width:200px;">Sessions Hosted</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int rank3 = 1;
+                        foreach (var p in Model.OrderByDescending(x => x.GMContribution))
+                        {
+                            <tr class="@(rank3 == 1 ? "top-player" : "")">
+                                <td>@rank3</td>
+                                <td>@p.Name</td>
+                                <td>@p.GMContribution</td>
+                            </tr>
+                            rank3++;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

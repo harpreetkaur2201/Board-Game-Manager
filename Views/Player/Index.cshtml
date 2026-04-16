@@ -1,0 +1,54 @@
+﻿@model List<Board_Game_Manager.Models.Player>
+
+<h1 class="mb-3">Player</h1>
+
+@if (User.IsInRole("Admin") || User.IsInRole("GM"))
+{
+    <a asp-controller="Player" asp-action="Create" class="btn btn-success mb-3">Create Player</a>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">No players available</div>
+}
+else
+{
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>Age</th>
+                <th>Registered At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Player p in Model)
+            {
+                <tr>
+                    <td>@p.PlayerID</td>
+                    <td>@p.Name</td>
+                    <td>@p.Age</td>
+                    <td>@p.RegisteredAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a asp-action="Details" asp-route-id="@p.PlayerID" class="btn btn-sm btn-outline-secondary">Details</a>
+
+                            @if (User.IsInRole("Admin") || User.IsInRole("GM"))
+                            {
+                                <a asp-action="Edit" asp-route-id="@p.PlayerID" class="btn btn-sm btn-outline-primary">Edit</a>
+                            }
+
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a asp-action="Delete" asp-route-id="@p.PlayerID" class="btn btn-sm btn-outline-danger">Delete</a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

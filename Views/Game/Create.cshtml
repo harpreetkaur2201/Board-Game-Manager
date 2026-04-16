@@ -1,0 +1,50 @@
+﻿@model Board_Game_Manager.Models.Game
+
+<h2 class="mb-4">Add Game</h2>
+
+<form asp-action="Create" method="post" class="card p-4 shadow-sm">
+    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="URL" class="form-label"></label>
+        <input asp-for="URL" class="form-control" />
+        <span asp-validation-for="URL" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="AvgDuration" class="form-label"></label>
+        <input asp-for="AvgDuration" class="form-control" />
+        <span asp-validation-for="AvgDuration" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MinPlayerCount" class="form-label"></label>
+        <input asp-for="MinPlayerCount" class="form-control" />
+        <span asp-validation-for="MinPlayerCount" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MaxPlayerCount" class="form-label"></label>
+        <input asp-for="MaxPlayerCount" class="form-control" />
+        <span asp-validation-for="MaxPlayerCount" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="AgeReq" class="form-label"></label>
+        <input asp-for="AgeReq" class="form-control" />
+        <span asp-validation-for="AgeReq" class="text-danger"></span>
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
