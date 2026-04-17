@@ -19,12 +19,15 @@ A web-based Board Game Management System built using ASP.NET Core MVC. This appl
 ## 🔐 Authentication & Access
 
 - Any user can register and log in to the system
-- To access full CRUD functionality (Create, Read, Update, Delete), you must log in as an admin
+- To access full CRUD functionality (Create, Read, Update, Delete), you must log in as an admin and gm (game master)
 
 ### 👤 Admin Credentials
 
 - **Email:** admin@123.com  
 - **Password:** AdminPassword123!
+
+- **Email:** gm@123.com  
+- **Password:** gmPassword123!
 
 ---
 
