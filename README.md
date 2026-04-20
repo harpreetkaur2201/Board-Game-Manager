@@ -2,9 +2,6 @@
 
 A web-based Board Game Management System built using ASP.NET Core MVC. This application allows users to manage game sessions, participants, and track scores in an organized and user-friendly interface.
 
-## 🌐 Live Demo
-[Live Demo](https://harpreetkaur2201.github.io/Board-Game-Manager/)
-
 ## 🚀 Features
 
 - User registration and login system
