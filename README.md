@@ -2,7 +2,8 @@
 
 A web-based Board Game Management System built using ASP.NET Core MVC. This application allows users to manage game sessions, participants, and track scores in an organized and user-friendly interface.
 
----
+## 🌐 Live Demo
+[Live Demo](https://harpreetkaur2201.github.io/Board-Game-Manager/)
 
 ## 🚀 Features
 
@@ -13,8 +14,6 @@ A web-based Board Game Management System built using ASP.NET Core MVC. This appl
 - Mark winners for each session
 - Responsive UI with light and dark mode support
 - Clean and structured multi-layer architecture (BLL, DAL, Models)
-
----
 
 ## 🔐 Authentication & Access
 
@@ -29,8 +28,6 @@ A web-based Board Game Management System built using ASP.NET Core MVC. This appl
 - **Email:** gm@123.com  
 - **Password:** gmPassword123!
 
----
-
 ## 🛠️ Technologies Used
 
 - ASP.NET Core MVC
@@ -39,7 +36,6 @@ A web-based Board Game Management System built using ASP.NET Core MVC. This appl
 - SQL Server
 - HTML, CSS, Bootstrap
 
----
 ## 🎯 Purpose
 
 This project is designed to demonstrate:
@@ -48,8 +44,6 @@ This project is designed to demonstrate:
 - Authentication and authorization
 - Database integration using Entity Framework
 - Clean UI design with theme support
-
----
 
 ## 📌 Future Improvements
 
